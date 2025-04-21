@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>
+            Welcome to my dashboard.
+            <nav id="nav">
+                <button onclick="toggleTheme()">Toggle Theme</button>
+            </nav>
+        </h1>
+    </header>
+    <main>
+        <section class="widget" id="clock">
+            <h2>Clock</h2>
+            <div id="time"></div>
+        </section>
+        <section class="widget" id="weather">
+            <h2>Weather</h2>
+            <p id="weatherinfo">Loading...</p>
+        </section>
+        <section class="widget" id="todo">
+            <h2>To-do List</h2>
+            <input type="text" id="todoinput" placeholder="Add a task">
+             <button onclick="addTodo()">Add</button>
+             <ul id="todolist"></ul>
+        </section>
+        <section class="widget" id="note">
+            <h2>Quick Notes</h2>
+            <textarea id="notearea" placeholder="Write something..."></textarea>
+            <button onclick="savenote()">Save Note</button>
+            <p id="notedisplay"></p>
+        </section>
+        <section class="widget" id="formarea">
+            <h2>Contact Form</h2>
+            <form id="contactform">
+            <input type="text" name="name" placeholder="Your name" required/>
+            <input type="email" name="email" placeholder="Your email" required/>
+            <textarea name="message" placeholder="Message" required></textarea>
+            <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Your Dashboard</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
